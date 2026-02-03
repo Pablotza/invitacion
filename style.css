@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #850505, #ff7e7e);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.story {
+  position: absolute;
+  width: 90%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 40px 30px;
+  text-align: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+}
+
+.story.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.editable {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 25px;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.yes {
+  background: #2ecc71;
+  color: white;
+}
+
+.no {
+  background: #e74c3c;
+  color: white;
+  position: relative;
+}
